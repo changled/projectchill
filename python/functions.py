@@ -62,11 +62,15 @@ def createFile(fileName):
    except:
       print "Error creating file\n"
 
-def deactivateUser(user)
+def deactivateUser(user):
 	user.clearance = 3
 	user.position = "deactivated"
 	user.jobType = "deactivated"
 
-def recordTime(user)
+def recordTime(user): #to do at login and logoff
+	time = datetime.datetime.now()
+
+	file = open('user.timeCard', 'r+')
+	file.write(time)
 
 
